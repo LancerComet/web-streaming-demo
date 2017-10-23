@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015",
+      "es2016"
+    ]
+  },
+  "include": [
+    "client/**/*.ts"
+  ]
+}

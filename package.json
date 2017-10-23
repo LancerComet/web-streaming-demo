@@ -1,0 +1,24 @@
+{
+  "name": "web-streaming-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./server/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^8.0.46",
+    "@types/socket.io": "^1.4.31",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.4",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "@types/socket.io-client": "^1.4.31",
+    "@types/webrtc": "0.0.22"
+  }
+}
