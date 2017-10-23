@@ -4,13 +4,14 @@
     <title>WebRTC Demo</title>
     <style>
       video {
-        margin: 0;
+        margin: 10px;
         background-color: #000;
       }
     </style>
   </head>
 
   <body>
+    <button onclick="recordLocalStream()">Record local stream 10s</button>
     <video id="local-camera" width="853" height="480" autoplay="autoplay"></video>
     <video id="remote-camera" width="853" height="480" autoplay="autoplay"></video>
     <script src="/socket.io/socket.io.js"></script>

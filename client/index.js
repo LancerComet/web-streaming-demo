@@ -128,3 +128,36 @@ async function connectToServer () {
 function setVideoStream (stream, videoElement) {
   videoElement.srcObject = stream
 }
+
+/**
+ * Local stream recording.
+ */
+async function recordLocalStream () {
+  console.log('[Recorder] Start recording.')
+  const recorder = new MediaRecorder(localStream)
+
+  recorder.ondataavailable = function (event) {
+    console.log('[Recorder] onDataAvailable: ', event)
+    const blob = event.data
+    download(blob)
+  }
+
+  recorder.start()
+  await wait(10000)
+  recorder.stop()
+}
+
+function wait (time = 1000) {
+  return new Promise(resolve => {
+    setTimeout(resolve, time)
+  })
+}
+
+function download (blob) {
+  const a = document.createElement('a')
+  const url = URL.createObjectURL(blob)
+  a.href = url
+  a.download = 'record'
+  document.body.appendChild(a)
+  a.click()
+}
